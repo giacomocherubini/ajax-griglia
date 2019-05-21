@@ -1,0 +1,35 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contenitore {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quadrato_grande {
+  height: 600px;
+  width: 600px;
+  margin: auto;
+}
+
+.quadratino {
+  height: 100px;
+  width: 100px;
+  float: left;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.bg_yellow {
+  background-color: yellow;
+}
+
+.bg_green {
+  background-color: green;
+}
