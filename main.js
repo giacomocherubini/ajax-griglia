@@ -6,29 +6,26 @@ $(document).ready(function(){
 
   var data = '';
 
-  $.ajax({
-    url: 'https://www.boolean.careers/api/random/int',
-    method: 'GET',
-    success: function(data) {
-    console.log(data);
-    }
-  });
-
-
   $('.quadratino').click(function() {
-    if (data.response <= 5) {
-      $(this).addClass('bg_yellow');
+    var square = $(this);
 
-    } else (data.response > 5) {
-      $(this).addClass('bg_green');
+    $.ajax({
+      url: 'https://www.boolean.careers/api/random/int',
+      method: 'GET',
+      success: function(data) {
+      console.log(data.response);
+
+
+      if (data.response <= 5) {
+        $(square).addClass('bg_yellow');
+      } else {
+        $(square).addClass('bg_green');
+      }
+      $(square).text(data.response);
+
     }
+    });
 
   });
-
-  //
-  //
-  // function numero_random(number) {
-  //
-  // }
 
 });
